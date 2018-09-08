@@ -45,7 +45,7 @@ public class CSVParser {
     }
 
     private func getRowValues(line: String) -> [String] {
-        return line.split(separator: ",").map(String.init).map(stripWhitespace)
+        return line.split(separator: ",", maxSplits: Int.max, omittingEmptySubsequences: false).map(String.init).map(stripWhitespace)
     }
 
     public func parse<T: CSVParsable>(parsable: T.Type) -> [T]? {
