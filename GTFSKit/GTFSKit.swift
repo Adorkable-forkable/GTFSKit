@@ -6,54 +6,54 @@
 import Foundation
 
 public enum LocationType: Int, CSVEnumeration {
-    case Stop = 0
-    case Station = 1
+    case stop = 0
+    case station = 1
 }
 
 public enum Accessibility: Int, CSVEnumeration {
-    case Unknown = 0
-    case Some = 1
-    case None = 2
+    case unknown = 0
+    case some = 1
+    case none = 2
 }
 
 public enum RouteType: Int, CSVEnumeration {
-    case Street = 0
-    case Underground = 1
-    case Rail = 2
-    case Bus = 3
-    case Ferry = 4
-    case Cable = 5
-    case Suspended = 6
-    case InclineRail = 7
+    case street = 0
+    case underground = 1
+    case rail = 2
+    case bus = 3
+    case ferry = 4
+    case cable = 5
+    case suspended = 6
+    case inclineRail = 7
 }
 
 public enum TransferType: Int, CSVEnumeration {
-    case Reccomended = 0
-    case Timed = 1
-    case Minimum = 2
-    case None = 3
+    case recommended = 0
+    case timed = 1
+    case minimum = 2
+    case none = 3
 }
 
 public enum ExceptionType: Int, CSVEnumeration {
-    case Added = 1
-    case Removed = 2
+    case added = 1
+    case removed = 2
 }
 
 public enum Direction: Int, CSVEnumeration {
-    case Forward = 0
-    case Backward = 1
+    case forward = 0
+    case backward = 1
 }
 
 public enum BoardingType: Int, CSVEnumeration {
-    case Regular = 0
-    case None = 1
-    case MustPhone = 2
-    case MustCoordinate = 3
+    case regular = 0
+    case none = 1
+    case mustPhone = 2
+    case mustCoordinate = 3
 }
 
 public enum Timepoint: Int, CSVEnumeration {
-    case Approximate = 0
-    case Exact = 1
+    case approximate = 0
+    case exact = 1
 }
 
 public class GTFSKit {}

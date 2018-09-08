@@ -12,7 +12,7 @@ public class CSVData {
         self.data = data
     }
 
-    public func containsColumn(columnName: String) -> Bool {
+    public func contains(columnName: String) -> Bool {
         if let _ = data[columnName] {
             return true
         }
@@ -20,9 +20,9 @@ public class CSVData {
         return false
     }
 
-    public func containsColumns(columnNames: String...) -> Bool {
+    public func contains(columnNames: String...) -> Bool {
         for columnName in columnNames {
-            if !containsColumn(columnName) {
+            if !contains(columnName: columnName) {
                 print("Missing \(columnName)")
                 return false
             }
@@ -31,7 +31,7 @@ public class CSVData {
         return true
     }
 
-    public func get<T>(columnName: String, parser: (String -> T?)) -> T? {
+    public func get<T>(columnName: String, parser: ((String) -> T?)) -> T? {
         if let value = self[columnName] {
             return parser(value);
         } else {

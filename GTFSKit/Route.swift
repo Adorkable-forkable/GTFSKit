@@ -29,7 +29,7 @@ public struct Route: CSVParsable {
     }
 
     public static func parse(data: CSVData) -> Route? {
-        if !data.containsColumns("route_id", "route_short_name", "route_long_name", "route_type") {
+        if !data.contains(columnNames: "route_id", "route_short_name", "route_long_name", "route_type") {
             return nil
         }
 
@@ -39,7 +39,7 @@ public struct Route: CSVParsable {
         let longName = data["route_long_name"]!
         let desc = data["route_desc"]
 
-        guard let type = data.get("route_type", parser: RouteType.fromString) else {
+        guard let type = data.get(columnName: "route_type", parser: RouteType.fromString) else {
             return nil
         }
 

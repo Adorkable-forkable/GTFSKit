@@ -19,14 +19,14 @@ public struct Transfer: CSVParsable {
     }
 
     public static func parse(data: CSVData) -> Transfer? {
-        if !data.containsColumns("from_stop_id", "to_stop_id", "transfer_type") {
+        if !data.contains(columnNames: "from_stop_id", "to_stop_id", "transfer_type") {
             return nil
         }
 
         let fromStopId = data["from_stop_id"]!
         let toStopId = data["to_stop_id"]!
 
-        let transferType = data.get("transfer_type", parser: TransferType.fromString(TransferType.Reccomended))!
+        let transferType = data.get(columnName: "transfer_type", parser: TransferType.fromString(defaultValue: TransferType.recommended))!
 
         var minTransferTime: Int? = nil
         if let minTransferTimeStr = data["min_transfer_time"] {

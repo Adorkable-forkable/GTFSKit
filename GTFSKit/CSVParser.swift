@@ -11,7 +11,7 @@ public protocol CSVParsable {
 
 public protocol CSVEnumeration: RawRepresentable {
     static func fromString(value: String) -> Self?
-    static func fromString(defaultValue: Self)(value: String) -> Self?
+    static func fromString(defaultValue: Self) -> (String) -> Self?
 }
 
 public extension CSVEnumeration where Self: RawRepresentable, Self.RawValue == Int {
@@ -23,12 +23,14 @@ public extension CSVEnumeration where Self: RawRepresentable, Self.RawValue == I
         return nil
     }
 
-    public static func fromString(defaultValue: Self)(value: String) -> Self? {
-        if let actualValue = fromString(value) {
-            return actualValue
+    public static func fromString(defaultValue: Self) -> (String) -> Self? {
+        return { (value: String) -> Self in
+            if let actualValue = fromString(value: value) {
+                return actualValue
+            }
+            
+            return defaultValue
         }
-
-        return defaultValue
     }
 }
 
@@ -39,19 +41,19 @@ public class CSVParser {
     }
 
     private func stripWhitespace(value: String) -> String {
-        return value.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        return value.trimmingCharacters(in: NSCharacterSet.whitespaces)
     }
 
     private func getRowValues(line: String) -> [String] {
-        return line.characters.split(",").map(String.init).map(stripWhitespace)
+        return line.split(separator: ",").map(String.init).map(stripWhitespace)
     }
 
     public func parse<T: CSVParsable>(parsable: T.Type) -> [T]? {
         var instances = [T]()
         var headings = [String]()
 
-        for (lineIndex, line) in lines.enumerate() {
-            let values = getRowValues(line)
+        for (lineIndex, line) in lines.enumerated() {
+            let values = getRowValues(line: line)
 
             if lineIndex == 0 {
                 headings = values
@@ -65,7 +67,7 @@ public class CSVParser {
                 lineData[headings[valueIndex]] = values[valueIndex]
             }
 
-            if let instance = parsable.parse(CSVData(data: lineData)) {
+            if let instance = parsable.parse(data: CSVData(data: lineData)) {
                 instances.append(instance)
             } else {
                 return nil

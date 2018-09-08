@@ -31,24 +31,24 @@ public struct StopTime: CSVParsable {
     }
 
     public static func parse(data: CSVData) -> StopTime? {
-        if !data.containsColumns("trip_id", "arrival_time", "departure_time", "stop_id", "stop_sequence") {
+        if !data.contains(columnNames: "trip_id", "arrival_time", "departure_time", "stop_id", "stop_sequence") {
             return nil
         }
 
         let tripId = data["trip_id"]!
-        let arrivalTime = data.get("arrival_time", parser: { Int($0) })
-        let departureTime = data.get("departure_time", parser: { Int($0) })
+        let arrivalTime = data.get(columnName: "arrival_time", parser: { Int($0) })
+        let departureTime = data.get(columnName: "departure_time", parser: { Int($0) })
         let stopId = data["stop_id"]!
 
-        guard let stopSequence = data.get("stop_sequence", parser: { Int($0) }) else {
+        guard let stopSequence = data.get(columnName: "stop_sequence", parser: { Int($0) }) else {
             return nil
         }
 
         let stopHeadsign = data["stop_headsign"]
-        let pickupType = data.get("pickup_type", parser: BoardingType.fromString(BoardingType.Regular))
-        let dropOffType = data.get("drop_off_type", parser: BoardingType.fromString(BoardingType.Regular))
+        let pickupType = data.get(columnName: "pickup_type", parser: BoardingType.fromString(defaultValue: BoardingType.regular))
+        let dropOffType = data.get(columnName: "drop_off_type", parser: BoardingType.fromString(defaultValue: BoardingType.regular))
         let shapeDistTraveled = data["shape_dist_traveled"]
-        let timepoint = data.get("timepoint", parser: Timepoint.fromString(Timepoint.Exact))
+        let timepoint = data.get(columnName: "timepoint", parser: Timepoint.fromString(defaultValue: Timepoint.exact))
 
         return StopTime(tripId: tripId, arrivalTime: arrivalTime, departureTime: departureTime, stopId: stopId, stopSequence: stopSequence, stopHeadsign: stopHeadsign, pickupType: pickupType, dropOffType: dropOffType, shapeDistTraveled: shapeDistTraveled, timepoint: timepoint)
     }

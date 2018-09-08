@@ -18,7 +18,7 @@ public class Agency: CSVRowObject {
     public required init?(_ row: CSVRow) {
         super.init(row)
 
-        if !row.containsHeadings("agency_name", "agency_url", "agency_timezone") {
+        if !row.contains(headings: "agency_name", "agency_url", "agency_timezone") {
             return nil
         }
     }

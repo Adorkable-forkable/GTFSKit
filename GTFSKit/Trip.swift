@@ -31,7 +31,7 @@ public struct Trip: CSVParsable {
     }
 
     public static func parse(data: CSVData) -> Trip? {
-        if !data.containsColumns("route_id", "service_id", "trip_id") {
+        if !data.contains(columnNames: "route_id", "service_id", "trip_id") {
             return nil
         }
 
@@ -41,14 +41,14 @@ public struct Trip: CSVParsable {
         let headsign = data["trip_headsign"]
         let shortName = data["trip_short_name"]
 
-        let direction: Direction? = data.get("direction_id", parser: Direction.fromString)
+        let direction: Direction? = data.get(columnName: "direction_id", parser: Direction.fromString)
 
         let blockId = data["block_id"]
         let shapeId = data["shape_id"]
 
-        let wheelchairAccessible = data.get("wheelchair_accessible", parser: Accessibility.fromString(Accessibility.Unknown))
+        let wheelchairAccessible = data.get(columnName: "wheelchair_accessible", parser: Accessibility.fromString(defaultValue: Accessibility.unknown))
 
-        let bikesAllowed = data.get("bikes_allowed", parser: Accessibility.fromString(Accessibility.Unknown))
+        let bikesAllowed = data.get(columnName: "bikes_allowed", parser: Accessibility.fromString(defaultValue: Accessibility.unknown))
 
         return Trip(routeId: routeId, serviceId: serviceId, id: id, headsign: headsign, shortName: shortName, direction: direction, blockId: blockId, shapeId: shapeId, wheelchairAccessible: wheelchairAccessible, bikesAllowed: bikesAllowed)
     }

@@ -34,7 +34,7 @@ public struct Stop: CSVParsable {
     }
 
     public static func parse(data: CSVData) -> Stop? {
-        if !data.containsColumns("stop_id", "stop_name", "stop_lat", "stop_lon") {
+        if !data.contains(columnNames: "stop_id", "stop_name", "stop_lat", "stop_lon") {
             return nil
         }
 
@@ -46,12 +46,12 @@ public struct Stop: CSVParsable {
         let zoneId = data["zone_id"]
         let url = data["stop_url"]
 
-        let locationType = data.get("location_type", parser: LocationType.fromString(LocationType.Stop))
+        let locationType = data.get(columnName: "location_type", parser: LocationType.fromString(defaultValue: LocationType.stop))
 
         let parentStation = data["parent_station"]
         let stopTimezone = data["stop_timezone"]
 
-        let wheelchairBoarding: Accessibility? = data.get("wheelchair_boarding", parser: Accessibility.fromString(Accessibility.Unknown))
+        let wheelchairBoarding: Accessibility? = data.get(columnName: "wheelchair_boarding", parser: Accessibility.fromString(defaultValue: Accessibility.unknown))
 
         return Stop(id: id, code: code, name: name, desc: desc, location: location, zoneId: zoneId, url: url, locationType: locationType, parentStation: parentStation, stopTimezone: stopTimezone, wheelchairBoarding: wheelchairBoarding)
     }
