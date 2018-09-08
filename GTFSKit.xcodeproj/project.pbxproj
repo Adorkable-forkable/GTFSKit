@@ -21,6 +21,7 @@
 		3CCA635221436DD30057E454 /* CSVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCA635121436DD30057E454 /* CSVKit.framework */; };
 		3CCA63532143737C0057E454 /* CSVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCA635121436DD30057E454 /* CSVKit.framework */; };
 		3CCA6355214373B60057E454 /* CSVKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CCA635121436DD30057E454 /* CSVKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CCA63D1214439830057E454 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63D0214439830057E454 /* Cartfile */; };
 		73C2ACE91BD1CC6000444E91 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACE81BD1CC6000444E91 /* Calendar.swift */; };
 		73C2ACEF1BD1DC3700444E91 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACEE1BD1DC3700444E91 /* Transfer.swift */; };
 		73C2ACF11BD1E41D00444E91 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */; };
@@ -65,6 +66,7 @@
 		04E13D441BC3D2510070B75D /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		04E13D461BC3D81B0070B75D /* CSVData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVData.swift; sourceTree = "<group>"; };
 		3CCA635121436DD30057E454 /* CSVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSVKit.framework; path = Carthage/Build/iOS/CSVKit.framework; sourceTree = "<group>"; };
+		3CCA63D0214439830057E454 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		73C2ACE81BD1CC6000444E91 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		73C2ACEE1BD1DC3700444E91 /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		044D9E711BC3043200ADB986 = {
 			isa = PBXGroup;
 			children = (
+				3CCA63D0214439830057E454 /* Cartfile */,
 				044D9E7D1BC3043200ADB986 /* GTFSKit */,
 				044D9E891BC3043200ADB986 /* GTFSKitTests */,
 				044D9E7C1BC3043200ADB986 /* Products */,
@@ -251,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCA63D1214439830057E454 /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
