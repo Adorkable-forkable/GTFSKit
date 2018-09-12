@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "044D9E841BC3043200ADB986"
-               BuildableName = "GTFSKitTests-iOS.xctest"
+               BuildableName = "GTFSKitTests.xctest"
                BlueprintName = "GTFSKitTests-iOS"
                ReferencedContainer = "container:GTFSKit.xcodeproj">
             </BuildableReference>
