@@ -3,7 +3,8 @@
 //  GTFSKit
 //
 
-#import <UIKit/UIKit.h>
+
+#import <Foundation/Foundation.h>
 
 //! Project version number for GTFSKit.
 FOUNDATION_EXPORT double GTFSKitVersionNumber;

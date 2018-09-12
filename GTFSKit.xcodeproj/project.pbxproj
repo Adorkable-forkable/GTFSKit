@@ -19,6 +19,37 @@
 		3C8921A4214866C9004AA78A /* StopTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A3214866C9004AA78A /* StopTimesTests.swift */; };
 		3C8921A621486833004AA78A /* TransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A521486833004AA78A /* TransferTests.swift */; };
 		3C8921A821489F64004AA78A /* TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A721489F64004AA78A /* TripTests.swift */; };
+		3C8922162149703D004AA78A /* CSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8922152149703D004AA78A /* CSV.framework */; };
+		3C8922172149709B004AA78A /* GTFSKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 04093D771BD31A320084A10D /* GTFSKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C8922182149709B004AA78A /* GTFSKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D3E1BC306B80070B75D /* GTFSKit.swift */; };
+		3C8922192149709B004AA78A /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D401BC307BD0070B75D /* Agency.swift */; };
+		3C89221A2149709B004AA78A /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACE81BD1CC6000444E91 /* Calendar.swift */; };
+		3C89221B2149709B004AA78A /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */; };
+		3C89221C2149709B004AA78A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04257A811BC42CCB00F06643 /* Route.swift */; };
+		3C89221D2149709B004AA78A /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D441BC3D2510070B75D /* Stop.swift */; };
+		3C89221E2149709B004AA78A /* StopTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497337A1BD1B11700A492E7 /* StopTime.swift */; };
+		3C89221F2149709B004AA78A /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACEE1BD1DC3700444E91 /* Transfer.swift */; };
+		3C8922202149709B004AA78A /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04257A831BC43A7800F06643 /* Trip.swift */; };
+		3C89222A21497109004AA78A /* GTFSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C89220D21496FAC004AA78A /* GTFSKit.framework */; };
+		3C8922352149731C004AA78A /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63E921463C520057E454 /* Shared.swift */; };
+		3C8922362149731C004AA78A /* AgenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A12148667E004AA78A /* AgenciesTests.swift */; };
+		3C8922372149731C004AA78A /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63FB21463E710057E454 /* CalendarTests.swift */; };
+		3C8922382149731C004AA78A /* CalendarDatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63F921463E0D0057E454 /* CalendarDatesTests.swift */; };
+		3C8922392149731C004AA78A /* RoutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63FD214640130057E454 /* RoutesTests.swift */; };
+		3C89223A2149731C004AA78A /* StopTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A3214866C9004AA78A /* StopTimesTests.swift */; };
+		3C89223B2149731C004AA78A /* StopsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63E521463C430057E454 /* StopsTests.swift */; };
+		3C89223C2149731C004AA78A /* TransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A521486833004AA78A /* TransferTests.swift */; };
+		3C89223D2149731C004AA78A /* TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A721489F64004AA78A /* TripTests.swift */; };
+		3C89223E21497323004AA78A /* agency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E321463C430057E454 /* agency.txt */; };
+		3C89223F21497323004AA78A /* calendar_dates.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EB21463E020057E454 /* calendar_dates.txt */; };
+		3C89224021497323004AA78A /* calendar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63ED21463E020057E454 /* calendar.txt */; };
+		3C89224121497323004AA78A /* routes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63F021463E030057E454 /* routes.txt */; };
+		3C89224221497323004AA78A /* shapes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EC21463E020057E454 /* shapes.txt */; };
+		3C89224321497323004AA78A /* stop_times.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EE21463E020057E454 /* stop_times.txt */; };
+		3C89224421497323004AA78A /* transfers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63F121463E030057E454 /* transfers.txt */; };
+		3C89224521497323004AA78A /* trips.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EF21463E020057E454 /* trips.txt */; };
+		3C89224621497323004AA78A /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E421463C430057E454 /* stops.txt */; };
+		3C8922772149799A004AA78A /* CSV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C89227621497999004AA78A /* CSV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CCA63D1214439830057E454 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63D0214439830057E454 /* Cartfile */; };
 		3CCA63E621463C430057E454 /* agency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E321463C430057E454 /* agency.txt */; };
 		3CCA63E721463C430057E454 /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E421463C430057E454 /* stops.txt */; };
@@ -49,9 +80,26 @@
 			remoteGlobalIDString = 044D9E7A1BC3043200ADB986;
 			remoteInfo = GTFSKit;
 		};
+		3C89222B21497109004AA78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 044D9E721BC3043200ADB986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C89220C21496FAC004AA78A;
+			remoteInfo = "GTFSKit-macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3C89223021497193004AA78A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C8922772149799A004AA78A /* CSV.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CCA6354214373AB0057E454 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +128,11 @@
 		3C8921A3214866C9004AA78A /* StopTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTimesTests.swift; sourceTree = "<group>"; };
 		3C8921A521486833004AA78A /* TransferTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTests.swift; sourceTree = "<group>"; };
 		3C8921A721489F64004AA78A /* TripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTests.swift; sourceTree = "<group>"; };
+		3C89220D21496FAC004AA78A /* GTFSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C8922152149703D004AA78A /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = Carthage/Build/macOS/CSV.framework; sourceTree = "<group>"; };
+		3C89222521497109004AA78A /* GTFSKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTFSKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C892231214971B5004AA78A /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = Carthage/Build/macOS/CSV.framework; sourceTree = "<group>"; };
+		3C89227621497999004AA78A /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = Carthage/Build/Mac/CSV.framework; sourceTree = "<group>"; };
 		3CCA63D0214439830057E454 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		3CCA63E321463C430057E454 /* agency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agency.txt; sourceTree = "<group>"; };
 		3CCA63E421463C430057E454 /* stops.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stops.txt; sourceTree = "<group>"; };
@@ -99,8 +152,6 @@
 		73C2ACE81BD1CC6000444E91 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		73C2ACEE1BD1DC3700444E91 /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
-		CCFD987BCA7577CAFA64E7F6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		DF3D0428D588B6238E7F0FE9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,17 +171,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C89220921496FAC004AA78A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8922162149703D004AA78A /* CSV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C89222221497109004AA78A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C89222A21497109004AA78A /* GTFSKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		044D9E711BC3043200ADB986 = {
 			isa = PBXGroup;
 			children = (
+				3C89227621497999004AA78A /* CSV.framework */,
 				3CCA63D0214439830057E454 /* Cartfile */,
 				044D9E7D1BC3043200ADB986 /* GTFSKit */,
 				044D9E891BC3043200ADB986 /* GTFSKitTests */,
 				044D9E7C1BC3043200ADB986 /* Products */,
-				31035AB7CF257232D204F5AF /* Pods */,
 				82E170D6758FBE53F651EB60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +207,8 @@
 			children = (
 				044D9E7B1BC3043200ADB986 /* GTFSKit.framework */,
 				044D9E851BC3043200ADB986 /* GTFSKitTests.xctest */,
+				3C89220D21496FAC004AA78A /* GTFSKit.framework */,
+				3C89222521497109004AA78A /* GTFSKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,15 +249,6 @@
 			path = GTFSKitTests;
 			sourceTree = "<group>";
 		};
-		31035AB7CF257232D204F5AF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DF3D0428D588B6238E7F0FE9 /* Pods.debug.xcconfig */,
-				CCFD987BCA7577CAFA64E7F6 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3CCA63E221463C430057E454 /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +268,8 @@
 		82E170D6758FBE53F651EB60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C892231214971B5004AA78A /* CSV.framework */,
+				3C8922152149703D004AA78A /* CSV.framework */,
 				3CCA63FF214829F60057E454 /* CSV.framework */,
 			);
 			name = Frameworks;
@@ -224,12 +286,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C89220A21496FAC004AA78A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8922172149709B004AA78A /* GTFSKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		044D9E7A1BC3043200ADB986 /* GTFSKit */ = {
+		044D9E7A1BC3043200ADB986 /* GTFSKit-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 044D9E8F1BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKit" */;
+			buildConfigurationList = 044D9E8F1BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKit-iOS" */;
 			buildPhases = (
 				044D9E761BC3043200ADB986 /* Sources */,
 				044D9E771BC3043200ADB986 /* Frameworks */,
@@ -240,14 +310,14 @@
 			);
 			dependencies = (
 			);
-			name = GTFSKit;
+			name = "GTFSKit-iOS";
 			productName = GTFSKit;
 			productReference = 044D9E7B1BC3043200ADB986 /* GTFSKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		044D9E841BC3043200ADB986 /* GTFSKitTests */ = {
+		044D9E841BC3043200ADB986 /* GTFSKitTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 044D9E921BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKitTests" */;
+			buildConfigurationList = 044D9E921BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKitTests-iOS" */;
 			buildPhases = (
 				044D9E811BC3043200ADB986 /* Sources */,
 				044D9E821BC3043200ADB986 /* Frameworks */,
@@ -259,9 +329,46 @@
 			dependencies = (
 				044D9E881BC3043200ADB986 /* PBXTargetDependency */,
 			);
-			name = GTFSKitTests;
+			name = "GTFSKitTests-iOS";
 			productName = GTFSKitTests;
 			productReference = 044D9E851BC3043200ADB986 /* GTFSKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C89220C21496FAC004AA78A /* GTFSKit-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C89221421496FAC004AA78A /* Build configuration list for PBXNativeTarget "GTFSKit-macOS" */;
+			buildPhases = (
+				3C89220821496FAC004AA78A /* Sources */,
+				3C89220921496FAC004AA78A /* Frameworks */,
+				3C89220A21496FAC004AA78A /* Headers */,
+				3C89220B21496FAC004AA78A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GTFSKit-macOS";
+			productName = "GTFSKit-macOS";
+			productReference = 3C89220D21496FAC004AA78A /* GTFSKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3C89222421497109004AA78A /* GTFSKitTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C89222D21497109004AA78A /* Build configuration list for PBXNativeTarget "GTFSKitTests-macOS" */;
+			buildPhases = (
+				3C89222121497109004AA78A /* Sources */,
+				3C89222221497109004AA78A /* Frameworks */,
+				3C89222321497109004AA78A /* Resources */,
+				3C89223021497193004AA78A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C89222C21497109004AA78A /* PBXTargetDependency */,
+			);
+			name = "GTFSKitTests-macOS";
+			productName = "GTFSKitTests-macOS";
+			productReference = 3C89222521497109004AA78A /* GTFSKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +377,7 @@
 		044D9E721BC3043200ADB986 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jack Wilsdon";
 				TargetAttributes = {
@@ -279,6 +386,14 @@
 					};
 					044D9E841BC3043200ADB986 = {
 						CreatedOnToolsVersion = 7.0.1;
+					};
+					3C89220C21496FAC004AA78A = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+					3C89222421497109004AA78A = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -294,8 +409,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				044D9E7A1BC3043200ADB986 /* GTFSKit */,
-				044D9E841BC3043200ADB986 /* GTFSKitTests */,
+				044D9E7A1BC3043200ADB986 /* GTFSKit-iOS */,
+				044D9E841BC3043200ADB986 /* GTFSKitTests-iOS */,
+				3C89220C21496FAC004AA78A /* GTFSKit-macOS */,
+				3C89222421497109004AA78A /* GTFSKitTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -322,6 +439,29 @@
 				3CCA63E621463C430057E454 /* agency.txt in Resources */,
 				3CCA63F621463E030057E454 /* trips.txt in Resources */,
 				3CCA63F521463E030057E454 /* stop_times.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C89220B21496FAC004AA78A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C89222321497109004AA78A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C89224221497323004AA78A /* shapes.txt in Resources */,
+				3C89224621497323004AA78A /* stops.txt in Resources */,
+				3C89224521497323004AA78A /* trips.txt in Resources */,
+				3C89224021497323004AA78A /* calendar.txt in Resources */,
+				3C89223F21497323004AA78A /* calendar_dates.txt in Resources */,
+				3C89224121497323004AA78A /* routes.txt in Resources */,
+				3C89224421497323004AA78A /* transfers.txt in Resources */,
+				3C89223E21497323004AA78A /* agency.txt in Resources */,
+				3C89224321497323004AA78A /* stop_times.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,13 +500,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C89220821496FAC004AA78A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C89221E2149709B004AA78A /* StopTime.swift in Sources */,
+				3C8922192149709B004AA78A /* Agency.swift in Sources */,
+				3C89221B2149709B004AA78A /* CalendarDate.swift in Sources */,
+				3C8922202149709B004AA78A /* Trip.swift in Sources */,
+				3C89221A2149709B004AA78A /* Calendar.swift in Sources */,
+				3C89221C2149709B004AA78A /* Route.swift in Sources */,
+				3C8922182149709B004AA78A /* GTFSKit.swift in Sources */,
+				3C89221F2149709B004AA78A /* Transfer.swift in Sources */,
+				3C89221D2149709B004AA78A /* Stop.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C89222121497109004AA78A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8922362149731C004AA78A /* AgenciesTests.swift in Sources */,
+				3C89223D2149731C004AA78A /* TripTests.swift in Sources */,
+				3C89223B2149731C004AA78A /* StopsTests.swift in Sources */,
+				3C8922382149731C004AA78A /* CalendarDatesTests.swift in Sources */,
+				3C8922372149731C004AA78A /* CalendarTests.swift in Sources */,
+				3C8922352149731C004AA78A /* Shared.swift in Sources */,
+				3C89223A2149731C004AA78A /* StopTimesTests.swift in Sources */,
+				3C89223C2149731C004AA78A /* TransferTests.swift in Sources */,
+				3C8922392149731C004AA78A /* RoutesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		044D9E881BC3043200ADB986 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 044D9E7A1BC3043200ADB986 /* GTFSKit */;
+			target = 044D9E7A1BC3043200ADB986 /* GTFSKit-iOS */;
 			targetProxy = 044D9E871BC3043200ADB986 /* PBXContainerItemProxy */;
+		};
+		3C89222C21497109004AA78A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C89220C21496FAC004AA78A /* GTFSKit-macOS */;
+			targetProxy = 3C89222B21497109004AA78A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,7 +655,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GTFSKit;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -503,7 +680,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GTFSKit;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
@@ -519,7 +696,7 @@
 				INFOPLIST_FILE = GTFSKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GTFSKitTests;
 			};
 			name = Debug;
 		};
@@ -533,7 +710,163 @@
 				INFOPLIST_FILE = GTFSKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GTFSKitTests;
+			};
+			name = Release;
+		};
+		3C89221221496FAC004AA78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/macOS";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GTFSKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKit;
+				PRODUCT_NAME = GTFSKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3C89221321496FAC004AA78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/macOS";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GTFSKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKit;
+				PRODUCT_NAME = GTFSKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		3C89222E21497109004AA78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GTFSKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKitTests;
+				PRODUCT_NAME = GTFSKitTests;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3C89222F21497109004AA78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GTFSKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jackwilsdon.GTFSKitTests;
+				PRODUCT_NAME = GTFSKitTests;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -549,7 +882,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		044D9E8F1BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKit" */ = {
+		044D9E8F1BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				044D9E901BC3043200ADB986 /* Debug */,
@@ -558,11 +891,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		044D9E921BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKitTests" */ = {
+		044D9E921BC3043200ADB986 /* Build configuration list for PBXNativeTarget "GTFSKitTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				044D9E931BC3043200ADB986 /* Debug */,
 				044D9E941BC3043200ADB986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C89221421496FAC004AA78A /* Build configuration list for PBXNativeTarget "GTFSKit-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C89221221496FAC004AA78A /* Debug */,
+				3C89221321496FAC004AA78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C89222D21497109004AA78A /* Build configuration list for PBXNativeTarget "GTFSKitTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C89222E21497109004AA78A /* Debug */,
+				3C89222F21497109004AA78A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

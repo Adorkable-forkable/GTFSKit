@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "044D9E7A1BC3043200ADB986"
                BuildableName = "GTFSKit.framework"
-               BlueprintName = "GTFSKit"
+               BlueprintName = "GTFSKit-iOS"
                ReferencedContainer = "container:GTFSKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "044D9E841BC3043200ADB986"
-               BuildableName = "GTFSKitTests.xctest"
-               BlueprintName = "GTFSKitTests"
+               BuildableName = "GTFSKitTests-iOS.xctest"
+               BlueprintName = "GTFSKitTests-iOS"
                ReferencedContainer = "container:GTFSKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -58,7 +58,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "044D9E7A1BC3043200ADB986"
             BuildableName = "GTFSKit.framework"
-            BlueprintName = "GTFSKit"
+            BlueprintName = "GTFSKit-iOS"
             ReferencedContainer = "container:GTFSKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -80,7 +80,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "044D9E7A1BC3043200ADB986"
             BuildableName = "GTFSKit.framework"
-            BlueprintName = "GTFSKit"
+            BlueprintName = "GTFSKit-iOS"
             ReferencedContainer = "container:GTFSKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -98,7 +98,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "044D9E7A1BC3043200ADB986"
             BuildableName = "GTFSKit.framework"
-            BlueprintName = "GTFSKit"
+            BlueprintName = "GTFSKit-iOS"
             ReferencedContainer = "container:GTFSKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
