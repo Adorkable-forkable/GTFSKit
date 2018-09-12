@@ -5,32 +5,39 @@
 
 import Foundation
 
-public struct CalendarDate: CSVParsable {
+public struct CalendarDate: Decodable {
     public let serviceId: String                    // service_id                (Required)
     public let date: Date                         // date                      (Required)
     public let exceptionType: ExceptionType         // exception_type            (Required)
 
-    public init(serviceId: String, date: Date, exceptionType: ExceptionType) {
-        self.serviceId = serviceId
-        self.date = date
-        self.exceptionType = exceptionType
+    enum CodingKeys : String, CodingKey {
+        case serviceId = "service_id"
+        case date = "date"
+        case exceptionType = "exception_type"
     }
-
-    public static func parse(data: CSVData) -> CalendarDate? {
-        if !data.contains(columnNames: "service_id", "date", "exception_type") {
-            return nil
+    
+    static var timeDateFormatter: DateFormatter {
+        let result = DateFormatter()
+        result.dateFormat = "yyyyMMdd"
+        return result
+    }
+    
+    private static func decode(from container: KeyedDecodingContainer<CalendarDate.CodingKeys>, forKey key: CodingKeys) throws -> Date {
+        let stringValue = try container.decode(String.self, forKey: key)
+        
+        guard let result = CalendarDate.timeDateFormatter.date(from: stringValue) else {
+            throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [key], debugDescription: "Invalid time format, expected '\(Calendar.timeDateFormatter.dateFormat)', received value '\(stringValue)'"))
         }
-
-        let serviceId = data["service_id"]!
-
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
-
-        let date = formatter.date(from: data["date"]!)!
-
-        let exceptionType = data.get(columnName: "exception_type", parser: ExceptionType.fromString)!
-
-        return CalendarDate(serviceId: serviceId, date: date, exceptionType: exceptionType)
+        return result
     }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.serviceId = try container.decode(String.self, forKey: .serviceId)
+        
+        self.date = try CalendarDate.decode(from: container, forKey: .date)
 
+        self.exceptionType = try container.decode(ExceptionType.self, forKey: .exceptionType)
+    }
 }

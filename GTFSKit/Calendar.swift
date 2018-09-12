@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct Calendar: CSVParsable {
+public struct Calendar: Decodable {
     public let serviceId: String                    // service_id               (Required)
     public let monday: Bool                         // monday                   (Required)
     public let tuesday: Bool                        // tuesday                  (Required)
@@ -17,40 +17,48 @@ public struct Calendar: CSVParsable {
     public let startDate: Date                    // start_date               (Required)
     public let endDate: Date                      // end_date                 (Required)
 
-    public init(serviceId: String, monday: Bool, tuesday: Bool, wednesday: Bool, thursday: Bool, friday: Bool, saturday: Bool, sunday: Bool, startDate: Date, endDate: Date) {
-        self.serviceId = serviceId
-        self.monday = monday
-        self.tuesday = tuesday
-        self.wednesday = wednesday
-        self.thursday = thursday
-        self.friday = friday
-        self.saturday = saturday
-        self.sunday = sunday
-        self.startDate = startDate
-        self.endDate = endDate
+    enum CodingKeys : String, CodingKey {
+        case serviceId = "service_id"
+        case monday = "monday"
+        case tuesday = "tuesday"
+        case wednesday = "wednesday"
+        case thursday = "thursday"
+        case friday = "friday"
+        case saturday = "saturday"
+        case sunday = "sunday"
+        case startDate = "start_date"
+        case endDate = "end_date"
     }
-
-    public static func parse(data: CSVData) -> Calendar? {
-        if !data.contains(columnNames: "service_id", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "start_date", "end_date") {
-            return nil
+    
+    static var timeDateFormatter: DateFormatter {
+        let result = DateFormatter()
+        result.dateFormat = "yyyyMMdd"
+        return result
+    }
+    
+    private static func decode(from container: KeyedDecodingContainer<Calendar.CodingKeys>, forKey key: CodingKeys) throws -> Date {
+        let stringValue = try container.decode(String.self, forKey: key)
+        
+        guard let result = Calendar.timeDateFormatter.date(from: stringValue) else {
+            throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [key], debugDescription: "Invalid time format, expected '\(Calendar.timeDateFormatter.dateFormat)', received value '\(stringValue)'"))
         }
-
-        let serviceId = data["service_id"]!
-        let monday = data.get(columnName: "monday", parser: { $0 == "1" })!
-        let tuesday = data.get(columnName: "tuesday", parser: { $0 == "1" })!
-        let wednesday = data.get(columnName: "wednesday", parser: { $0 == "1" })!
-        let thursday = data.get(columnName: "thursday", parser: { $0 == "1" })!
-        let friday = data.get(columnName: "friday", parser: { $0 == "1" })!
-        let saturday = data.get(columnName: "saturday", parser: { $0 == "1" })!
-        let sunday = data.get(columnName: "sunday", parser: { $0 == "1" })!
-
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
-
-        let startDate = formatter.date(from: data["start_date"]!)!
-        let endDate = formatter.date(from: data["start_date"]!)!
-
-        return Calendar(serviceId: serviceId, monday: monday, tuesday: tuesday, wednesday: wednesday, thursday: thursday, friday: friday, saturday: saturday, sunday: sunday, startDate: startDate, endDate: endDate)
+        return result
     }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.serviceId = try container.decode(String.self, forKey: .serviceId)
 
+        self.monday = try container.decode(Bool.self, forKey: .monday)
+        self.tuesday = try container.decode(Bool.self, forKey: .tuesday)
+        self.wednesday = try container.decode(Bool.self, forKey: .wednesday)
+        self.thursday = try container.decode(Bool.self, forKey: .thursday)
+        self.friday = try container.decode(Bool.self, forKey: .friday)
+        self.saturday = try container.decode(Bool.self, forKey: .saturday)
+        self.sunday = try container.decode(Bool.self, forKey: .sunday)
+
+        self.startDate = try Calendar.decode(from: container, forKey: .startDate)
+        self.endDate = try Calendar.decode(from: container, forKey: .endDate)
+    }
 }

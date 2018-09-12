@@ -4,22 +4,23 @@
 //
 
 import Foundation
-import CSVKit
 
-public class Agency: CSVRowObject {
-    public var id: String? { return self["agency_id"].asString }                // agency_id        (Optional)
-    public var name: String { return self["agency_name"].asString! }            // agency_name      (Required)
-    public var url: String { return self["agency_url"].asString! }              // agency_url       (Required)
-    public var timezone: String { return self["agency_timezone"].asString! }    // agency_timezone  (Required)
-    public var lang: String? { return self["agency_lang"].asString }            // agency_lang      (Optional)
-    public var phone: String? { return self["agency_phone"].asString }          // agency_phone     (Optional)
-    public var fareUrl: String? { return self["agency_fare_url"].asString }     // agency_fare_url  (Optional)
+public class Agency: Decodable {
+    public let id: String?                  // agency_id        (Optional)
+    public let name: String                 // agency_name      (Required)
+    public let url: String                  // agency_url       (Required)
+    public let timezone: String             // agency_timezone  (Required)
+    public let lang: String?                // agency_lang      (Optional)
+    public let phone: String?               // agency_phone     (Optional)
+    public let fareUrl: String?             // agency_fare_url  (Optional)
 
-    public required init?(_ row: CSVRow) {
-        super.init(row)
-
-        if !row.contains(headings: "agency_name", "agency_url", "agency_timezone") {
-            return nil
-        }
+    enum CodingKeys: String, CodingKey {
+        case id = "agency_id"
+        case name = "agency_name"
+        case url = "agency_url"
+        case timezone = "agency_timezone"
+        case lang = "agency_lang"
+        case phone = "agency_phone"
+        case fareUrl = "agency_fare_url"
     }
 }

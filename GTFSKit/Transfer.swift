@@ -5,35 +5,18 @@
 
 import Foundation
 
-public struct Transfer: CSVParsable {
+public struct Transfer: Decodable {
     public let fromStopId: String                   // from_stop_id              (Required)
     public let toStopId: String                     // to_stop_id                (Required)
     public let transferType: TransferType           // transfer_type             (Required)
     public let minTransferTime: Int?                // min_transfer_time         (Optional)
-
-    public init(fromStopId: String, toStopId: String, transferType: TransferType, minTransferTime: Int?) {
-        self.fromStopId = fromStopId
-        self.toStopId = toStopId
-        self.transferType = transferType
-        self.minTransferTime = minTransferTime
+    
+    enum CodingKeys : String, CodingKey {
+        case fromStopId = "from_stop_id"
+        case toStopId = "to_stop_id"
+        
+        case transferType = "transfer_type"
+        
+        case minTransferTime = "min_transfer_time"
     }
-
-    public static func parse(data: CSVData) -> Transfer? {
-        if !data.contains(columnNames: "from_stop_id", "to_stop_id", "transfer_type") {
-            return nil
-        }
-
-        let fromStopId = data["from_stop_id"]!
-        let toStopId = data["to_stop_id"]!
-
-        let transferType = data.get(columnName: "transfer_type", parser: TransferType.fromString(defaultValue: TransferType.recommended))!
-
-        var minTransferTime: Int? = nil
-        if let minTransferTimeStr = data["min_transfer_time"] {
-            minTransferTime = Int(minTransferTimeStr)
-        }
-
-        return Transfer(fromStopId: fromStopId, toStopId: toStopId, transferType: transferType, minTransferTime: minTransferTime)
-    }
-
 }

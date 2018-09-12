@@ -11,17 +11,31 @@
 		04257A821BC42CCB00F06643 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04257A811BC42CCB00F06643 /* Route.swift */; };
 		04257A841BC43A7800F06643 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04257A831BC43A7800F06643 /* Trip.swift */; };
 		044D9E861BC3043200ADB986 /* GTFSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D9E7B1BC3043200ADB986 /* GTFSKit.framework */; };
-		044D9E8B1BC3043200ADB986 /* GTFSKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D9E8A1BC3043200ADB986 /* GTFSKitTests.swift */; };
 		0497337B1BD1B11700A492E7 /* StopTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497337A1BD1B11700A492E7 /* StopTime.swift */; };
 		04E13D3F1BC306B80070B75D /* GTFSKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D3E1BC306B80070B75D /* GTFSKit.swift */; };
 		04E13D411BC307BD0070B75D /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D401BC307BD0070B75D /* Agency.swift */; };
-		04E13D431BC317690070B75D /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D421BC317690070B75D /* CSVParser.swift */; };
 		04E13D451BC3D2510070B75D /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D441BC3D2510070B75D /* Stop.swift */; };
-		04E13D471BC3D81B0070B75D /* CSVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D461BC3D81B0070B75D /* CSVData.swift */; };
-		3CCA635221436DD30057E454 /* CSVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCA635121436DD30057E454 /* CSVKit.framework */; };
-		3CCA63532143737C0057E454 /* CSVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCA635121436DD30057E454 /* CSVKit.framework */; };
-		3CCA6355214373B60057E454 /* CSVKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CCA635121436DD30057E454 /* CSVKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C8921A22148667E004AA78A /* AgenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A12148667E004AA78A /* AgenciesTests.swift */; };
+		3C8921A4214866C9004AA78A /* StopTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A3214866C9004AA78A /* StopTimesTests.swift */; };
+		3C8921A621486833004AA78A /* TransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A521486833004AA78A /* TransferTests.swift */; };
+		3C8921A821489F64004AA78A /* TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A721489F64004AA78A /* TripTests.swift */; };
 		3CCA63D1214439830057E454 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63D0214439830057E454 /* Cartfile */; };
+		3CCA63E621463C430057E454 /* agency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E321463C430057E454 /* agency.txt */; };
+		3CCA63E721463C430057E454 /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E421463C430057E454 /* stops.txt */; };
+		3CCA63E821463C430057E454 /* StopsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63E521463C430057E454 /* StopsTests.swift */; };
+		3CCA63EA21463C520057E454 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63E921463C520057E454 /* Shared.swift */; };
+		3CCA63F221463E030057E454 /* calendar_dates.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EB21463E020057E454 /* calendar_dates.txt */; };
+		3CCA63F321463E030057E454 /* shapes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EC21463E020057E454 /* shapes.txt */; };
+		3CCA63F421463E030057E454 /* calendar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63ED21463E020057E454 /* calendar.txt */; };
+		3CCA63F521463E030057E454 /* stop_times.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EE21463E020057E454 /* stop_times.txt */; };
+		3CCA63F621463E030057E454 /* trips.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EF21463E020057E454 /* trips.txt */; };
+		3CCA63F721463E030057E454 /* routes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63F021463E030057E454 /* routes.txt */; };
+		3CCA63F821463E030057E454 /* transfers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63F121463E030057E454 /* transfers.txt */; };
+		3CCA63FA21463E0D0057E454 /* CalendarDatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63F921463E0D0057E454 /* CalendarDatesTests.swift */; };
+		3CCA63FC21463E710057E454 /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63FB21463E710057E454 /* CalendarTests.swift */; };
+		3CCA63FE214640130057E454 /* RoutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63FD214640130057E454 /* RoutesTests.swift */; };
+		3CCA6400214829F60057E454 /* CSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCA63FF214829F60057E454 /* CSV.framework */; };
+		3CCA640121482A5D0057E454 /* CSV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CCA63FF214829F60057E454 /* CSV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73C2ACE91BD1CC6000444E91 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACE81BD1CC6000444E91 /* Calendar.swift */; };
 		73C2ACEF1BD1DC3700444E91 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACEE1BD1DC3700444E91 /* Transfer.swift */; };
 		73C2ACF11BD1E41D00444E91 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */; };
@@ -44,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3CCA6355214373B60057E454 /* CSVKit.framework in CopyFiles */,
+				3CCA640121482A5D0057E454 /* CSV.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,16 +71,31 @@
 		044D9E7B1BC3043200ADB986 /* GTFSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		044D9E801BC3043200ADB986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044D9E851BC3043200ADB986 /* GTFSKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTFSKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		044D9E8A1BC3043200ADB986 /* GTFSKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTFSKitTests.swift; sourceTree = "<group>"; };
 		044D9E8C1BC3043200ADB986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0497337A1BD1B11700A492E7 /* StopTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTime.swift; sourceTree = "<group>"; };
 		04E13D3E1BC306B80070B75D /* GTFSKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GTFSKit.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04E13D401BC307BD0070B75D /* Agency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agency.swift; sourceTree = "<group>"; };
-		04E13D421BC317690070B75D /* CSVParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CSVParser.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04E13D441BC3D2510070B75D /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
-		04E13D461BC3D81B0070B75D /* CSVData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVData.swift; sourceTree = "<group>"; };
-		3CCA635121436DD30057E454 /* CSVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSVKit.framework; path = Carthage/Build/iOS/CSVKit.framework; sourceTree = "<group>"; };
+		3C8921A12148667E004AA78A /* AgenciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgenciesTests.swift; sourceTree = "<group>"; };
+		3C8921A3214866C9004AA78A /* StopTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTimesTests.swift; sourceTree = "<group>"; };
+		3C8921A521486833004AA78A /* TransferTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTests.swift; sourceTree = "<group>"; };
+		3C8921A721489F64004AA78A /* TripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTests.swift; sourceTree = "<group>"; };
 		3CCA63D0214439830057E454 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		3CCA63E321463C430057E454 /* agency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agency.txt; sourceTree = "<group>"; };
+		3CCA63E421463C430057E454 /* stops.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stops.txt; sourceTree = "<group>"; };
+		3CCA63E521463C430057E454 /* StopsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsTests.swift; sourceTree = "<group>"; };
+		3CCA63E921463C520057E454 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		3CCA63EB21463E020057E454 /* calendar_dates.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendar_dates.txt; sourceTree = "<group>"; };
+		3CCA63EC21463E020057E454 /* shapes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shapes.txt; sourceTree = "<group>"; };
+		3CCA63ED21463E020057E454 /* calendar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calendar.txt; sourceTree = "<group>"; };
+		3CCA63EE21463E020057E454 /* stop_times.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stop_times.txt; sourceTree = "<group>"; };
+		3CCA63EF21463E020057E454 /* trips.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trips.txt; sourceTree = "<group>"; };
+		3CCA63F021463E030057E454 /* routes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = routes.txt; sourceTree = "<group>"; };
+		3CCA63F121463E030057E454 /* transfers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = transfers.txt; sourceTree = "<group>"; };
+		3CCA63F921463E0D0057E454 /* CalendarDatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDatesTests.swift; sourceTree = "<group>"; };
+		3CCA63FB21463E710057E454 /* CalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTests.swift; sourceTree = "<group>"; };
+		3CCA63FD214640130057E454 /* RoutesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesTests.swift; sourceTree = "<group>"; };
+		3CCA63FF214829F60057E454 /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = Carthage/Build/iOS/CSV.framework; sourceTree = "<group>"; };
 		73C2ACE81BD1CC6000444E91 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		73C2ACEE1BD1DC3700444E91 /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
@@ -79,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCA635221436DD30057E454 /* CSVKit.framework in Frameworks */,
+				3CCA6400214829F60057E454 /* CSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCA63532143737C0057E454 /* CSVKit.framework in Frameworks */,
 				044D9E861BC3043200ADB986 /* GTFSKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,15 +151,13 @@
 				04093D771BD31A320084A10D /* GTFSKit.h */,
 				04E13D3E1BC306B80070B75D /* GTFSKit.swift */,
 				04E13D401BC307BD0070B75D /* Agency.swift */,
-				73C2ACEE1BD1DC3700444E91 /* Transfer.swift */,
-				04E13D421BC317690070B75D /* CSVParser.swift */,
-				04E13D441BC3D2510070B75D /* Stop.swift */,
 				73C2ACE81BD1CC6000444E91 /* Calendar.swift */,
 				73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */,
-				04E13D461BC3D81B0070B75D /* CSVData.swift */,
 				04257A811BC42CCB00F06643 /* Route.swift */,
-				04257A831BC43A7800F06643 /* Trip.swift */,
+				04E13D441BC3D2510070B75D /* Stop.swift */,
 				0497337A1BD1B11700A492E7 /* StopTime.swift */,
+				73C2ACEE1BD1DC3700444E91 /* Transfer.swift */,
+				04257A831BC43A7800F06643 /* Trip.swift */,
 			);
 			path = GTFSKit;
 			sourceTree = "<group>";
@@ -139,8 +165,17 @@
 		044D9E891BC3043200ADB986 /* GTFSKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				044D9E8A1BC3043200ADB986 /* GTFSKitTests.swift */,
 				044D9E8C1BC3043200ADB986 /* Info.plist */,
+				3CCA63E221463C430057E454 /* Test Data */,
+				3CCA63E921463C520057E454 /* Shared.swift */,
+				3C8921A12148667E004AA78A /* AgenciesTests.swift */,
+				3CCA63FB21463E710057E454 /* CalendarTests.swift */,
+				3CCA63F921463E0D0057E454 /* CalendarDatesTests.swift */,
+				3CCA63FD214640130057E454 /* RoutesTests.swift */,
+				3C8921A3214866C9004AA78A /* StopTimesTests.swift */,
+				3CCA63E521463C430057E454 /* StopsTests.swift */,
+				3C8921A521486833004AA78A /* TransferTests.swift */,
+				3C8921A721489F64004AA78A /* TripTests.swift */,
 			);
 			path = GTFSKitTests;
 			sourceTree = "<group>";
@@ -154,10 +189,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3CCA63E221463C430057E454 /* Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				3CCA63E321463C430057E454 /* agency.txt */,
+				3CCA63EB21463E020057E454 /* calendar_dates.txt */,
+				3CCA63ED21463E020057E454 /* calendar.txt */,
+				3CCA63F021463E030057E454 /* routes.txt */,
+				3CCA63EC21463E020057E454 /* shapes.txt */,
+				3CCA63EE21463E020057E454 /* stop_times.txt */,
+				3CCA63F121463E030057E454 /* transfers.txt */,
+				3CCA63EF21463E020057E454 /* trips.txt */,
+				3CCA63E421463C430057E454 /* stops.txt */,
+			);
+			path = "Test Data";
+			sourceTree = "<group>";
+		};
 		82E170D6758FBE53F651EB60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3CCA635121436DD30057E454 /* CSVKit.framework */,
+				3CCA63FF214829F60057E454 /* CSV.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,6 +313,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCA63F421463E030057E454 /* calendar.txt in Resources */,
+				3CCA63F321463E030057E454 /* shapes.txt in Resources */,
+				3CCA63F721463E030057E454 /* routes.txt in Resources */,
+				3CCA63E721463C430057E454 /* stops.txt in Resources */,
+				3CCA63F221463E030057E454 /* calendar_dates.txt in Resources */,
+				3CCA63F821463E030057E454 /* transfers.txt in Resources */,
+				3CCA63E621463C430057E454 /* agency.txt in Resources */,
+				3CCA63F621463E030057E454 /* trips.txt in Resources */,
+				3CCA63F521463E030057E454 /* stop_times.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,13 +335,11 @@
 				04E13D411BC307BD0070B75D /* Agency.swift in Sources */,
 				73C2ACE91BD1CC6000444E91 /* Calendar.swift in Sources */,
 				04E13D3F1BC306B80070B75D /* GTFSKit.swift in Sources */,
-				04E13D431BC317690070B75D /* CSVParser.swift in Sources */,
 				04257A821BC42CCB00F06643 /* Route.swift in Sources */,
 				04E13D451BC3D2510070B75D /* Stop.swift in Sources */,
 				73C2ACEF1BD1DC3700444E91 /* Transfer.swift in Sources */,
 				04257A841BC43A7800F06643 /* Trip.swift in Sources */,
 				0497337B1BD1B11700A492E7 /* StopTime.swift in Sources */,
-				04E13D471BC3D81B0070B75D /* CSVData.swift in Sources */,
 				73C2ACF11BD1E41D00444E91 /* CalendarDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +348,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044D9E8B1BC3043200ADB986 /* GTFSKitTests.swift in Sources */,
+				3C8921A22148667E004AA78A /* AgenciesTests.swift in Sources */,
+				3C8921A821489F64004AA78A /* TripTests.swift in Sources */,
+				3CCA63EA21463C520057E454 /* Shared.swift in Sources */,
+				3C8921A621486833004AA78A /* TransferTests.swift in Sources */,
+				3C8921A4214866C9004AA78A /* StopTimesTests.swift in Sources */,
+				3CCA63FE214640130057E454 /* RoutesTests.swift in Sources */,
+				3CCA63FA21463E0D0057E454 /* CalendarDatesTests.swift in Sources */,
+				3CCA63FC21463E710057E454 /* CalendarTests.swift in Sources */,
+				3CCA63E821463C430057E454 /* StopsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
