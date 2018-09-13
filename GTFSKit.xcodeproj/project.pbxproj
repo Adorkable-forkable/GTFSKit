@@ -15,6 +15,10 @@
 		04E13D3F1BC306B80070B75D /* GTFSKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D3E1BC306B80070B75D /* GTFSKit.swift */; };
 		04E13D411BC307BD0070B75D /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D401BC307BD0070B75D /* Agency.swift */; };
 		04E13D451BC3D2510070B75D /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D441BC3D2510070B75D /* Stop.swift */; };
+		3C4DE63A214AD10800985BBB /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE639214AD10800985BBB /* Shape.swift */; };
+		3C4DE63B214AD10800985BBB /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE639214AD10800985BBB /* Shape.swift */; };
+		3C4DE642214AD41100985BBB /* ShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE63F214AD3A000985BBB /* ShapeTests.swift */; };
+		3C4DE643214AD41200985BBB /* ShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4DE63F214AD3A000985BBB /* ShapeTests.swift */; };
 		3C8921A22148667E004AA78A /* AgencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A12148667E004AA78A /* AgencyTests.swift */; };
 		3C8921A4214866C9004AA78A /* StopTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A3214866C9004AA78A /* StopTimeTests.swift */; };
 		3C8921A621486833004AA78A /* TransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A521486833004AA78A /* TransferTests.swift */; };
@@ -124,6 +128,8 @@
 		04E13D3E1BC306B80070B75D /* GTFSKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GTFSKit.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04E13D401BC307BD0070B75D /* Agency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agency.swift; sourceTree = "<group>"; };
 		04E13D441BC3D2510070B75D /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		3C4DE639214AD10800985BBB /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		3C4DE63F214AD3A000985BBB /* ShapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTests.swift; sourceTree = "<group>"; };
 		3C8921A12148667E004AA78A /* AgencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyTests.swift; sourceTree = "<group>"; };
 		3C8921A3214866C9004AA78A /* StopTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTimeTests.swift; sourceTree = "<group>"; };
 		3C8921A521486833004AA78A /* TransferTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTests.swift; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 				73C2ACE81BD1CC6000444E91 /* Calendar.swift */,
 				73C2ACF01BD1E41D00444E91 /* CalendarDate.swift */,
 				04257A811BC42CCB00F06643 /* Route.swift */,
+				3C4DE639214AD10800985BBB /* Shape.swift */,
 				04E13D441BC3D2510070B75D /* Stop.swift */,
 				0497337A1BD1B11700A492E7 /* StopTime.swift */,
 				73C2ACEE1BD1DC3700444E91 /* Transfer.swift */,
@@ -241,6 +248,7 @@
 				3CCA63FB21463E710057E454 /* CalendarTests.swift */,
 				3CCA63F921463E0D0057E454 /* CalendarDateTests.swift */,
 				3CCA63FD214640130057E454 /* RouteTests.swift */,
+				3C4DE63F214AD3A000985BBB /* ShapeTests.swift */,
 				3C8921A3214866C9004AA78A /* StopTimeTests.swift */,
 				3CCA63E521463C430057E454 /* StopTests.swift */,
 				3C8921A521486833004AA78A /* TransferTests.swift */,
@@ -477,6 +485,7 @@
 				04E13D3F1BC306B80070B75D /* GTFSKit.swift in Sources */,
 				04257A821BC42CCB00F06643 /* Route.swift in Sources */,
 				04E13D451BC3D2510070B75D /* Stop.swift in Sources */,
+				3C4DE63A214AD10800985BBB /* Shape.swift in Sources */,
 				73C2ACEF1BD1DC3700444E91 /* Transfer.swift in Sources */,
 				04257A841BC43A7800F06643 /* Trip.swift in Sources */,
 				0497337B1BD1B11700A492E7 /* StopTime.swift in Sources */,
@@ -491,6 +500,7 @@
 				3C8921A22148667E004AA78A /* AgencyTests.swift in Sources */,
 				3C8921A821489F64004AA78A /* TripTests.swift in Sources */,
 				3CCA63EA21463C520057E454 /* Shared.swift in Sources */,
+				3C4DE643214AD41200985BBB /* ShapeTests.swift in Sources */,
 				3C8921A621486833004AA78A /* TransferTests.swift in Sources */,
 				3C8921A4214866C9004AA78A /* StopTimeTests.swift in Sources */,
 				3CCA63FE214640130057E454 /* RouteTests.swift in Sources */,
@@ -509,6 +519,7 @@
 				3C89221B2149709B004AA78A /* CalendarDate.swift in Sources */,
 				3C8922202149709B004AA78A /* Trip.swift in Sources */,
 				3C89221A2149709B004AA78A /* Calendar.swift in Sources */,
+				3C4DE63B214AD10800985BBB /* Shape.swift in Sources */,
 				3C89221C2149709B004AA78A /* Route.swift in Sources */,
 				3C8922182149709B004AA78A /* GTFSKit.swift in Sources */,
 				3C89221F2149709B004AA78A /* Transfer.swift in Sources */,
@@ -523,6 +534,7 @@
 				3C8922362149731C004AA78A /* AgencyTests.swift in Sources */,
 				3C89223D2149731C004AA78A /* TripTests.swift in Sources */,
 				3C89223B2149731C004AA78A /* StopTests.swift in Sources */,
+				3C4DE642214AD41100985BBB /* ShapeTests.swift in Sources */,
 				3C8922382149731C004AA78A /* CalendarDateTests.swift in Sources */,
 				3C8922372149731C004AA78A /* CalendarTests.swift in Sources */,
 				3C8922352149731C004AA78A /* Shared.swift in Sources */,
