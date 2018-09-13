@@ -11,6 +11,6 @@ import GTFSKit
 
 class ShapeTests: XCTestCase {
     func testParse() {
-        testFromCSV(bundle: Bundle(for: type(of: self)), forResource: "shapes", withExtension: "txt", as: Shape.self, expectedCount: 19890)
+        testFromCSV(bundle: Bundle(for: type(of: self)), forResource: "shapes", withExtension: "txt", as: Shape.self, expectedCount: 124098)
     }
 }

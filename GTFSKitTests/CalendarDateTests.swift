@@ -11,10 +11,24 @@ import GTFSKit
 
 class CalendarDateTests: XCTestCase {
     func testParse() {
-        guard let stops: [CalendarDate] = createFromCSV(bundle: Bundle(for: type(of: self)), forResource: "calendar_dates", withExtension: "txt") else {
+        guard let values: [CalendarDate] = createFromCSV(bundle: Bundle(for: type(of: self)), forResource: "calendar_dates", withExtension: "txt") else {
             return
         }
         
-        XCTAssertEqual(stops.count, 96, "Expected 96 calendar dates")
+        XCTAssertEqual(values.count, 96, "Expected 96 calendar dates")
+    }
+    
+    func testCalendar() {
+        guard let values: [CalendarDate] = createFromCSV(bundle: Bundle(for: type(of: self)), forResource: "calendar_dates", withExtension: "txt") else {
+            return
+        }
+
+        guard let calendars: [GTFSKit.Calendar] = createFromCSV(bundle: Bundle(for: type(of: self)), forResource: "calendar", withExtension: "txt") else {
+            return
+        }
+
+        for calendarDate in values {
+            XCTAssertNoThrow(try calendarDate.calendar(calendars))
+        }
     }
 }

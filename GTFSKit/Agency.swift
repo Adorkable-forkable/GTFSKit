@@ -23,4 +23,21 @@ public class Agency: Decodable {
         case phone = "agency_phone"
         case fareUrl = "agency_fare_url"
     }
+    
+    public class NoIdError: Error {
+    }
+    public func routes(_ routes: [Route]) throws -> [Route] {
+        guard let id = self.id else {
+            throw NoIdError()
+        }
+        return routes.filter({ (route) -> Bool in
+            return route.agencyId == id
+        })
+    }
+}
+
+extension Array where Element == Agency {
+    public func agency(for route: Route) throws -> Agency {
+        return try route.agency(self)
+    }
 }

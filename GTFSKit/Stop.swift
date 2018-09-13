@@ -38,3 +38,25 @@ public struct Stop: Decodable {
         case wheelchairBoarding = "wheelchair_boarding"
     }
 }
+
+extension Stop {
+    public func stopTimes(_ stopTimes: [StopTime]) -> [StopTime] {
+        return stopTimes.filter({ (stopTime) -> Bool in
+            return stopTime.stopId == self.id
+        })
+    }
+}
+
+extension Array where Element == Stop {
+    public func stop(for stopTime: StopTime) throws -> Stop {
+        return try stopTime.stop(stops: self)
+    }
+    
+    public func fromStop(for transfer: Transfer) throws -> Stop {
+        return try transfer.fromStop(stops: self)
+    }
+    
+    public func toStop(for transfer: Transfer) throws -> Stop {
+        return try transfer.toStop(stops: self)
+    }
+}

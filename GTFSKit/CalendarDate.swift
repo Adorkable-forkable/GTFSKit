@@ -7,7 +7,7 @@ import Foundation
 
 public struct CalendarDate: Decodable {
     public let serviceId: String                    // service_id                (Required)
-    public let date: Date                         // date                      (Required)
+    public let date: Date                           // date                      (Required)
     public let exceptionType: ExceptionType         // exception_type            (Required)
 
     enum CodingKeys : String, CodingKey {
@@ -39,5 +39,19 @@ public struct CalendarDate: Decodable {
         self.date = try CalendarDate.decode(from: container, forKey: .date)
 
         self.exceptionType = try container.decode(ExceptionType.self, forKey: .exceptionType)
+    }
+}
+
+extension CalendarDate {
+    public func calendar(_ calendars: [GTFSKit.Calendar]) throws -> GTFSKit.Calendar {
+        return try calendars.filterOne({ (calendar) -> Bool in
+            return calendar.serviceId == self.serviceId
+        })
+    }
+}
+
+extension Array where Element == CalendarDate {
+    public func calendarDates(for calendar: GTFSKit.Calendar) -> [CalendarDate] {
+        return calendar.calendarDates(self)
     }
 }

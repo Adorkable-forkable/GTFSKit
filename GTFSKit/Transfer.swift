@@ -20,3 +20,17 @@ public struct Transfer: Decodable {
         case minTransferTime = "min_transfer_time"
     }
 }
+
+extension Transfer {
+    public func fromStop(stops: [Stop]) throws -> Stop {
+        return try stops.filterOne({ (stop) -> Bool in
+            return stop.id == self.fromStopId
+        })
+    }
+    
+    public func toStop(stops: [Stop]) throws -> Stop {
+        return try stops.filterOne({ (stop) -> Bool in
+            return stop.id == self.toStopId
+        })
+    }
+}

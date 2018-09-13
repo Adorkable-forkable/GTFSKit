@@ -28,3 +28,36 @@ public struct Route: Decodable {
         case textColor = "route_text_color"
     }
 }
+
+extension Route {
+    public class NoAgencyError: Error {
+    }
+    
+    public func agency(_ agencies: [Agency]) throws -> Agency {
+        guard let agencyId = self.agencyId else {
+            throw NoAgencyError()
+        }
+        return try agencies.filterOne({ (agency) -> Bool in
+            return agency.id == agencyId
+        })
+    }
+    
+    public func trips(_ trips: [Trip]) -> [Trip] {
+        return trips.filter( { $0.routeId == self.id })
+    }
+    
+    public func trips(_ trips: [Trip], inDirection direction: Direction) -> [Trip] {
+        return self.trips(trips).filter({ (test) -> Bool in
+            guard let testDirection = test.direction else {
+                return false
+            }
+            return testDirection == direction
+        })
+    }
+}
+
+extension Array where Element == Route {
+    public func routes(for agency: Agency) throws -> [Route] {
+        return try agency.routes(self)
+    }
+}

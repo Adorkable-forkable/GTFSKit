@@ -8,9 +8,9 @@ import Foundation
 public struct StopTime: Decodable {
     public let tripId: String                       // trip_id                  (Required)
     
-    // TODO: func that requires Date
-    public let arrivalTime: Date?                    // arrival_time             (Optional) - Actually required but can be empty
-    public let departureTime: Date?                  // departure_time           (Optional) - Actually required but can be empty
+    // TODO: access func that requires Date so we clarify that arrivalTime and departureTime are times without dates
+    public let arrivalTime: Date?                    // arrival_time             (Optional) - TODO: Actually required but can be empty
+    public let departureTime: Date?                  // departure_time           (Optional) - TODO: Actually required but can be empty
 
     public let stopId: String                       // stop_id                  (Required)
     public let stopSequence: Int                    // stop_sequence            (Required)
@@ -86,5 +86,39 @@ public struct StopTime: Decodable {
         } else {
             self.timepoint = nil
         }
+    }
+}
+
+extension StopTime {
+    public func stop(stops: [Stop]) throws -> Stop {
+        return try stops.filterOne({ (stop) -> Bool in
+            return stop.id == self.stopId
+        })
+    }
+    
+    public func trip(_ trips: [Trip]) throws -> Trip {
+        return try trips.filterOne({ (trip) -> Bool in
+            return trip.id == self.tripId
+        })
+    }
+    
+    public static func sort(left: StopTime, right: StopTime) -> ComparisonResult {
+        if left.stopSequence < right.stopSequence {
+            return .orderedAscending
+        } else if left.stopSequence == right.stopSequence {
+            return .orderedSame
+        } else {
+            return .orderedDescending
+        }
+    }
+    
+    public static func sort(left: StopTime, right: StopTime) -> Bool {
+        return self.sort(left: left, right: right) == .orderedAscending
+    }
+}
+
+extension Array where Element == StopTime {
+    public func stopTimes(for trip: Trip) -> [StopTime] {
+        return trip.stopTimes(self)
     }
 }

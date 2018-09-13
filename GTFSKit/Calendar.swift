@@ -62,3 +62,17 @@ public struct Calendar: Decodable {
         self.endDate = try Calendar.decode(from: container, forKey: .endDate)
     }
 }
+
+extension GTFSKit.Calendar {
+    public func calendarDates(_ calendarDates: [CalendarDate]) -> [CalendarDate] {
+        return calendarDates.filter({ (calendarDate) -> Bool in
+            return calendarDate.serviceId == self.serviceId
+        })
+    }
+}
+
+extension Array where Element == GTFSKit.Calendar {
+    public func calendar(for calendarDate: CalendarDate) throws -> GTFSKit.Calendar {
+        return try calendarDate.calendar(self)
+    }
+}

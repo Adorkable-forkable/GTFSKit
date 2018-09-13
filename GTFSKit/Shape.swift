@@ -30,3 +30,25 @@ public struct Shape: Decodable {
         case distanceTraveled = "shape_dist_traveled"
     }
 }
+
+extension Shape {
+    public static func sort(left: Shape, right: Shape) -> ComparisonResult {
+        if left.sequence < right.sequence {
+            return .orderedAscending
+        } else if left.sequence == right.sequence {
+            return .orderedSame
+        } else {
+            return .orderedDescending
+        }
+    }
+    
+    public static func sort(left: Shape, right: Shape) -> Bool {
+        return self.sort(left: left, right: right) == .orderedAscending
+    }
+}
+
+extension Array where Element == Shape {
+    public func shape(for trip: Trip) throws -> Shape {
+        return try trip.shape(self)
+    }
+}

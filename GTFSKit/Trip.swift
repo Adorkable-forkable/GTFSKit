@@ -30,3 +30,36 @@ public struct Trip: Decodable {
         case bikesAllowed = "bikes_allowed"
     }
 }
+
+extension Trip {
+    public func stopTimes(_ stopTimes: [StopTime]) -> [StopTime] {
+        return stopTimes.filter( { $0.tripId == self.id })
+    }
+    
+    public func route(_ routes: [Route]) throws -> Route {
+        return try routes.filterOne({ (route) -> Bool in
+            return route.id == self.routeId
+        })
+    }
+    
+    class NoShapeIdError: Error {
+    }
+    public func shape(_ shapes: [Shape]) throws -> Shape {
+        guard let shapeId = self.shapeId else {
+            throw NoShapeIdError()
+        }
+        return try shapes.filterOne({ (shape) -> Bool in
+            return shape.id == shapeId
+        })
+    }
+}
+
+extension Array where Element == Trip {
+    public func trips(for route: Route) -> [Trip] {
+        return route.trips(self)
+    }
+    
+    public func trips(for route: Route, in direction: Direction) -> [Trip] {
+        return route.trips(self, inDirection: direction)
+    }
+}
