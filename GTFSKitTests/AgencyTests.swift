@@ -1,5 +1,5 @@
 //
-//  AgenciesTests.swift
+//  AgencyTests.swift
 //  GTFSKitTests
 //
 //  Created by Ian Grossberg on 9/11/18.
@@ -9,7 +9,7 @@
 import XCTest
 import GTFSKit
 
-class AgenciesTests: XCTestCase {
+class AgencyTests: XCTestCase {
     func testParse() {
         guard let values: [Agency] = createFromCSV(bundle: Bundle(for: type(of: self)), forResource: "agency", withExtension: "txt") else {
             return

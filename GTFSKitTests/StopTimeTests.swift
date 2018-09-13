@@ -1,5 +1,5 @@
 //
-//  StopTimesTests.swift
+//  StopTimeTests.swift
 //  GTFSKitTests
 //
 //  Created by Ian Grossberg on 9/11/18.
@@ -9,7 +9,7 @@
 import XCTest
 import GTFSKit
 
-class StopTimesTests: XCTestCase {
+class StopTimeTests: XCTestCase {
     func testParse() {
         testFromCSV(bundle: Bundle(for: type(of: self)), forResource: "stop_times", withExtension: "txt", as: StopTime.self, expectedCount: 548744)
     }
