@@ -90,7 +90,7 @@ public struct StopTime: Decodable {
 }
 
 extension StopTime {
-    public func stop(stops: [Stop]) throws -> Stop {
+    public func stop(_ stops: [Stop]) throws -> Stop {
         return try stops.filterOne({ (stop) -> Bool in
             return stop.id == self.stopId
         })

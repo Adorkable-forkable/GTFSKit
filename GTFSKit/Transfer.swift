@@ -22,13 +22,13 @@ public struct Transfer: Decodable {
 }
 
 extension Transfer {
-    public func fromStop(stops: [Stop]) throws -> Stop {
+    public func fromStop(_ stops: [Stop]) throws -> Stop {
         return try stops.filterOne({ (stop) -> Bool in
             return stop.id == self.fromStopId
         })
     }
     
-    public func toStop(stops: [Stop]) throws -> Stop {
+    public func toStop(_ stops: [Stop]) throws -> Stop {
         return try stops.filterOne({ (stop) -> Bool in
             return stop.id == self.toStopId
         })

@@ -49,14 +49,14 @@ extension Stop {
 
 extension Array where Element == Stop {
     public func stop(for stopTime: StopTime) throws -> Stop {
-        return try stopTime.stop(stops: self)
+        return try stopTime.stop(self)
     }
     
     public func fromStop(for transfer: Transfer) throws -> Stop {
-        return try transfer.fromStop(stops: self)
+        return try transfer.fromStop(self)
     }
     
     public func toStop(for transfer: Transfer) throws -> Stop {
-        return try transfer.toStop(stops: self)
+        return try transfer.toStop(self)
     }
 }
