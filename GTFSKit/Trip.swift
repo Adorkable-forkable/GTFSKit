@@ -44,13 +44,13 @@ extension Trip {
     
     class NoShapeIdError: Error {
     }
-    public func shape(_ shapes: [Shape]) throws -> Shape {
+    public func shape(_ shapes: [Shape]) throws -> [Shape] {
         guard let shapeId = self.shapeId else {
             throw NoShapeIdError()
         }
-        return try shapes.filterOne({ (shape) -> Bool in
+        return shapes.filter({ (shape) -> Bool in
             return shape.id == shapeId
-        })
+        }).sorted(by: Shape.sort)
     }
 }
 
