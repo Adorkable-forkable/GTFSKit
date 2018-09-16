@@ -44,7 +44,7 @@ extension Trip {
     
     class NoShapeIdError: Error {
     }
-    public func shape(_ shapes: [Shape]) throws -> [Shape] {
+    public func shapes(_ shapes: [Shape]) throws -> [Shape] {
         guard let shapeId = self.shapeId else {
             throw NoShapeIdError()
         }

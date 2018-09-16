@@ -60,4 +60,8 @@ extension Array where Element == Route {
     public func routes(for agency: Agency) throws -> [Route] {
         return try agency.routes(self)
     }
+    
+    public func route(for trip: Trip) throws -> Route {
+        return try trip.route(self)
+    }
 }

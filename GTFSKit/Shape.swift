@@ -48,7 +48,7 @@ extension Shape {
 }
 
 extension Array where Element == Shape {
-    public func shape(for trip: Trip) throws -> [Shape] {
-        return try trip.shape(self)
+    public func shapes(for trip: Trip) throws -> [Shape] {
+        return try trip.shapes(self)
     }
 }
