@@ -9,11 +9,11 @@
 import Foundation
 import CoreLocation
 
-public struct Shape: Decodable {
+public struct Shape: Codable {
     public let id: String                                   // shape_id (Required)
     
-    public let latitude: Double                             // shape_pt_lat (Required)
-    public let longitude: Double                            // shape_pt_lon (Required)
+    public let latitude: CLLocationDegrees                             // shape_pt_lat (Required)
+    public let longitude: CLLocationDegrees                            // shape_pt_lon (Required)
     public var location: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
     }
@@ -21,6 +21,17 @@ public struct Shape: Decodable {
     public let sequence: Int                                // shape_pt_sequence (Required)
 
     public let distanceTraveled: Double?                     // shape_dist_traveled (Optional)
+    
+    public init(id: String, latitude: Double, longitude: Double, sequence: Int, distanceTraveled: Double?) {
+        self.id = id
+        
+        self.latitude = latitude
+        self.longitude = longitude
+        
+        self.sequence = sequence
+        
+        self.distanceTraveled = distanceTraveled
+    }
     
     enum CodingKeys : String, CodingKey {
         case id = "shape_id"
@@ -44,6 +55,22 @@ extension Shape {
     
     public static func sort(left: Shape, right: Shape) -> Bool {
         return self.sort(left: left, right: right) == .orderedAscending
+    }
+}
+
+extension Shape: Equatable {
+    public static func == (lhs: Shape, rhs: Shape) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Shape {
+    public func compare(with: Shape) -> Bool {
+        return self.id == with.id
+            && self.latitude == with.latitude
+            && self.longitude == with.longitude
+            && self.sequence == with.sequence
+            && self.distanceTraveled == with.distanceTraveled
     }
 }
 

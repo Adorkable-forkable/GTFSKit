@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct Route: Decodable {
+public struct Route: Codable {
     public let id: String           // route_id         (Required)
     public let agencyId: String?    // agency_id        (Optional)
     public let shortName: String    // route_short_name (Required)
@@ -15,6 +15,18 @@ public struct Route: Decodable {
     public let url: String?         // route_url        (Optional)
     public let color: String?       // route_color      (Optional)
     public let textColor: String?   // route_text_color (Optional)
+    
+    public init(id: String, agencyId: String?, shortName: String, longName: String, desc: String?, type: RouteType, url: String?, color: String?, textColor: String?) {
+        self.id = id
+        self.agencyId = agencyId
+        self.shortName = shortName
+        self.longName = longName
+        self.desc = desc
+        self.type = type
+        self.url = url
+        self.color = color
+        self.textColor = textColor
+    }
 
     enum CodingKeys : String, CodingKey {
         case id = "route_id"
@@ -53,6 +65,26 @@ extension Route {
             }
             return testDirection == direction
         })
+    }
+}
+
+extension Route: Equatable {
+    public static func == (lhs: Route, rhs: Route) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Route {
+    public func compare(with: Route) -> Bool {
+        return self.id == with.id
+            && self.agencyId == with.agencyId
+            && self.shortName == with.shortName
+            && self.longName == with.longName
+            && self.desc == with.desc
+            && self.type == with.type
+            && self.url == with.url
+            && self.color == with.color
+            && self.textColor == with.textColor
     }
 }
 

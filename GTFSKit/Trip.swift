@@ -5,10 +5,10 @@
 
 import Foundation
 
-public struct Trip: Decodable {
+public struct Trip: Codable {
+    public let id: String                           // trip_id                  (Required)
     public let routeId: String                      // route_id                 (Required)
     public let serviceId: String                    // service_id               (Required)
-    public let id: String                           // trip_id                  (Required)
     public let headsign: String?                    // trip_headsign            (Optional)
     public let shortName: String?                   // trip_short_name          (Optional)
     public let direction: Direction?                // direction_id             (Optional)
@@ -16,11 +16,24 @@ public struct Trip: Decodable {
     public let shapeId: String?                     // shape_id                 (Optional)
     public let wheelchairAccessible: Accessibility? // wheelchair_accessible    (Optional)
     public let bikesAllowed: Accessibility?         // bikes_allowed            (Optional)
+    
+    public init(id: String, routeId: String, serviceId: String, headsign: String?, shortName: String?, direction: Direction?, blockId: String?, shapeId: String?, wheelchairAccessible: Accessibility?, bikesAllowed: Accessibility?) {
+        self.id = id
+        self.routeId = routeId
+        self.serviceId = serviceId
+        self.headsign = headsign
+        self.shortName = shortName
+        self.direction = direction
+        self.blockId = blockId
+        self.shapeId = shapeId
+        self.wheelchairAccessible = wheelchairAccessible
+        self.bikesAllowed = bikesAllowed
+    }
 
     enum CodingKeys : String, CodingKey {
+        case id = "trip_id"
         case routeId = "route_id"
         case serviceId = "service_id"
-        case id = "trip_id"
         case headsign = "trip_headsign"
         case shortName = "trip_short_name"
         case direction = "direction_id"
@@ -51,6 +64,27 @@ extension Trip {
         return shapes.filter({ (shape) -> Bool in
             return shape.id == shapeId
         }).sorted(by: Shape.sort)
+    }
+}
+
+extension Trip: Equatable {
+    public static func == (lhs: Trip, rhs: Trip) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Trip {
+    public func compare(with: Trip) -> Bool {
+        return self.id == with.id
+            && self.routeId == with.routeId
+            && self.serviceId == with.serviceId
+            && self.headsign == with.headsign
+            && self.shortName == with.shortName
+            && self.direction == with.direction
+            && self.blockId == with.blockId
+            && self.shapeId == with.shapeId
+            && self.wheelchairAccessible == with.wheelchairAccessible
+            && self.bikesAllowed == with.bikesAllowed
     }
 }
 

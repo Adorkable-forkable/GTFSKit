@@ -5,11 +5,17 @@
 
 import Foundation
 
-public struct CalendarDate: Decodable {
+public struct CalendarDate: Codable {
     public let serviceId: String                    // service_id                (Required)
     public let date: Date                           // date                      (Required)
     public let exceptionType: ExceptionType         // exception_type            (Required)
 
+    public init(serviceId: String, date: Date, exceptionType: ExceptionType) {
+        self.serviceId = serviceId
+        self.date = date
+        self.exceptionType = exceptionType
+    }
+    
     enum CodingKeys : String, CodingKey {
         case serviceId = "service_id"
         case date = "date"
@@ -19,6 +25,7 @@ public struct CalendarDate: Decodable {
     static var timeDateFormatter: DateFormatter {
         let result = DateFormatter()
         result.dateFormat = "yyyyMMdd"
+        result.timeZone = TimeZone(abbreviation: "UTC")
         return result
     }
     
@@ -36,9 +43,19 @@ public struct CalendarDate: Decodable {
         
         self.serviceId = try container.decode(String.self, forKey: .serviceId)
         
-        self.date = try CalendarDate.decode(from: container, forKey: .date)
+        self.date = try container.decode(Date.self, forKey: .date, formatter: CalendarDate.timeDateFormatter)
 
         self.exceptionType = try container.decode(ExceptionType.self, forKey: .exceptionType)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(self.serviceId, forKey: .serviceId)
+        
+        try container.encode(self.date, forKey: .date, formatter: CalendarDate.timeDateFormatter)
+        
+        try container.encode(self.exceptionType, forKey: .exceptionType)
     }
 }
 
@@ -47,6 +64,16 @@ extension CalendarDate {
         return try calendars.filterOne({ (calendar) -> Bool in
             return calendar.serviceId == self.serviceId
         })
+    }
+}
+
+extension CalendarDate: Equatable {
+    public static func == (lhs: CalendarDate, rhs: CalendarDate) -> Bool {
+        return lhs.serviceId == rhs.serviceId
+            
+            && lhs.date == rhs.date
+            
+            && lhs.exceptionType == rhs.exceptionType
     }
 }
 
