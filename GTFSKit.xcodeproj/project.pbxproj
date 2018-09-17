@@ -29,7 +29,6 @@
 		3C8921A4214866C9004AA78A /* StopTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A3214866C9004AA78A /* StopTimeTests.swift */; };
 		3C8921A621486833004AA78A /* TransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A521486833004AA78A /* TransferTests.swift */; };
 		3C8921A821489F64004AA78A /* TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8921A721489F64004AA78A /* TripTests.swift */; };
-		3C8922162149703D004AA78A /* CSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8922152149703D004AA78A /* CSV.framework */; };
 		3C8922172149709B004AA78A /* GTFSKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 04093D771BD31A320084A10D /* GTFSKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C8922182149709B004AA78A /* GTFSKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D3E1BC306B80070B75D /* GTFSKit.swift */; };
 		3C8922192149709B004AA78A /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E13D401BC307BD0070B75D /* Agency.swift */; };
@@ -60,7 +59,6 @@
 		3C89224521497323004AA78A /* trips.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63EF21463E020057E454 /* trips.txt */; };
 		3C89224621497323004AA78A /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E421463C430057E454 /* stops.txt */; };
 		3C8922772149799A004AA78A /* CSV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C89227621497999004AA78A /* CSV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3CCA63D1214439830057E454 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63D0214439830057E454 /* Cartfile */; };
 		3CCA63E621463C430057E454 /* agency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E321463C430057E454 /* agency.txt */; };
 		3CCA63E721463C430057E454 /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CCA63E421463C430057E454 /* stops.txt */; };
 		3CCA63E821463C430057E454 /* StopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63E521463C430057E454 /* StopTests.swift */; };
@@ -75,7 +73,6 @@
 		3CCA63FA21463E0D0057E454 /* CalendarDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63F921463E0D0057E454 /* CalendarDateTests.swift */; };
 		3CCA63FC21463E710057E454 /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63FB21463E710057E454 /* CalendarTests.swift */; };
 		3CCA63FE214640130057E454 /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA63FD214640130057E454 /* RouteTests.swift */; };
-		3CCA6400214829F60057E454 /* CSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CCA63FF214829F60057E454 /* CSV.framework */; };
 		3CCA640121482A5D0057E454 /* CSV.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CCA63FF214829F60057E454 /* CSV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73C2ACE91BD1CC6000444E91 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACE81BD1CC6000444E91 /* Calendar.swift */; };
 		73C2ACEF1BD1DC3700444E91 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2ACEE1BD1DC3700444E91 /* Transfer.swift */; };
@@ -174,7 +171,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCA6400214829F60057E454 /* CSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +186,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8922162149703D004AA78A /* CSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +445,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCA63D1214439830057E454 /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
