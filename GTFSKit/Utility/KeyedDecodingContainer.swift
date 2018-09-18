@@ -9,7 +9,7 @@
 import Foundation
 
 extension KeyedDecodingContainer {
-    public func decode(_ type: Date.Type, forKey key: KeyedDecodingContainer.Key, formatter: DateFormatter) throws -> Date {
+    func decode(_ type: Date.Type, forKey key: KeyedDecodingContainer.Key, formatter: DateFormatter) throws -> Date {
         let stringValue = try self.decode(String.self, forKey: key)
         
         guard let result = formatter.date(from: stringValue) else {

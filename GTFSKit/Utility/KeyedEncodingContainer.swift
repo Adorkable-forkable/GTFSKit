@@ -9,7 +9,7 @@
 import Foundation
 
 extension KeyedEncodingContainer {
-    public mutating func encode(_ value: Date, forKey key: KeyedEncodingContainer.Key, formatter: DateFormatter) throws {
+    mutating func encode(_ value: Date, forKey key: KeyedEncodingContainer.Key, formatter: DateFormatter) throws {
         let stringValue = formatter.string(from: value)
         
         try self.encode(stringValue, forKey: key)
