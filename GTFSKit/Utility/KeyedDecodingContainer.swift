@@ -15,7 +15,7 @@ extension KeyedDecodingContainer {
         guard let result = formatter.date(from: stringValue) else {
             throw DecodingError.dataCorrupted(DecodingError.Context(
                 codingPath: [key],
-                debugDescription: "Invalid time format, expected '\(Calendar.timeDateFormatter.dateFormat)', received value '\(stringValue)'")
+                debugDescription: "Invalid time format, expected '\(String(describing: Calendar.timeDateFormatter.dateFormat))', received value '\(stringValue)'")
             )
         }
         return result

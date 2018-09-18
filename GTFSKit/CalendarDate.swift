@@ -33,7 +33,7 @@ public struct CalendarDate: Codable {
         let stringValue = try container.decode(String.self, forKey: key)
         
         guard let result = CalendarDate.timeDateFormatter.date(from: stringValue) else {
-            throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [key], debugDescription: "Invalid time format, expected '\(Calendar.timeDateFormatter.dateFormat)', received value '\(stringValue)'"))
+            throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [key], debugDescription: "Invalid time format, expected '\(String(describing: Calendar.timeDateFormatter.dateFormat))', received value '\(stringValue)'"))
         }
         return result
     }
