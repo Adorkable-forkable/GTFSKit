@@ -145,6 +145,7 @@
 		3C89222521497109004AA78A /* GTFSKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTFSKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C892231214971B5004AA78A /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = Carthage/Build/macOS/CSV.framework; sourceTree = "<group>"; };
 		3C89227621497999004AA78A /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = Carthage/Build/Mac/CSV.framework; sourceTree = "<group>"; };
+		3C9DD4442165CAFE005BE419 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		3CCA63D0214439830057E454 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		3CCA63E321463C430057E454 /* agency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agency.txt; sourceTree = "<group>"; };
 		3CCA63E421463C430057E454 /* stops.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stops.txt; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 		044D9E711BC3043200ADB986 = {
 			isa = PBXGroup;
 			children = (
+				3C9DD4442165CAFE005BE419 /* Cartfile.private */,
 				3C89227621497999004AA78A /* CSV.framework */,
 				3CCA63D0214439830057E454 /* Cartfile */,
 				044D9E7D1BC3043200ADB986 /* GTFSKit */,
